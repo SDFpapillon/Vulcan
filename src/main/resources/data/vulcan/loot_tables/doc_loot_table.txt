@@ -1,0 +1,11 @@
+aller voir : https://minecraft.fandom.com/wiki/Loot_table
+créé le dossier data/minecraft/tags/blocks/mineable
+créé les 4 fichiers outils
+add les blocks dans les fichiers corespondant
+créé les 3 fichiers "need_..._tool"
+add les blocks dans les fichiers de niveau sinon c cassable avec du bois
+
+si on veut un truc cassable seulement avec de la netherite (voir plus) on doit aller dans
+
+
+pour les trucs prevue pour être casser a la mains, jsp

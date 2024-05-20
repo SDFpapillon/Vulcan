@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 1000,
+  "experience": 0.00,
+  "ingredient": {
+    "item": "vulcan:vulcan_powder"
+  },
+  "result": "vulcan:vulcan_ingot"
+}

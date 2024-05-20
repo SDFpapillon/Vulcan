@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "vulcan:vulcan_raw_powder"
+    },
+    "T": {
+      "item": "vulcan:sieve"
+    }
+  },
+  "pattern": [
+    "###",
+    "#T#",
+    "###"
+  ],
+  "result": {
+    "item": "vulcan:vulcan_powder"
+  }
+}

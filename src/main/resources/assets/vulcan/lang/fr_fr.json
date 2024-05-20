@@ -1,0 +1,22 @@
+{
+  "item.vulcan.vulcan_ingot": "Lingot de Vulcain",
+  "item.vulcan.vulcan_nugget": "Nugette de Vulcain",
+  "item.vulcan.vulcan_powder": "Poudre de Vulcain",
+  "item.vulcan.vulcan_raw_powder": "Poudre de Vulcain brute",
+  "item.vulcan.sieve":  "Tamis",
+  "item.vulcan.sieve_grid":  "Grille pour Tamis",
+
+  "block.vulcan.vulcan_ore": "Minerais de Vulcain",
+
+  "item.vulcan.vulcan_sword": "Epée de Vulcain",
+  "item.vulcan.vulcan_shovel": "Pèle de Vulcain",
+  "item.vulcan.vulcan_pickaxe": "Pioche de Vulcain",
+  "item.vulcan.vulcan_axe": "Ache de Vulcain",
+  "item.vulcan.vulcan_hoe": "Oue de Vulcain",
+  "item.vulcan.vulcan_helmet": "Casque de Vulcain",
+  "item.vulcan.vulcan_chestplate": "Plastron de Vulcain",
+  "item.vulcan.vulcan_leggings": "Pantalon de Vulcain",
+  "item.vulcan.vulcan_boots": "Bote de Vulcain",
+
+  "itemgroup.vulcan": "Vulcain"
+}

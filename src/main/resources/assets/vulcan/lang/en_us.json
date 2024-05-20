@@ -1,0 +1,22 @@
+{
+  "item.vulcan.vulcan_ingot": "Vulcan Ingot",
+  "item.vulcan.vulcan_nugget": "Vulcan Nugget",
+  "item.vulcan.vulcan_powder": "Vulcan Powder",
+  "item.vulcan.vulcan_raw_powder": "Vulcan Raw Powder",
+  "item.vulcan.sieve": "Sieve",
+  "item.vulcan.sieve_grid": "Sieve Grid",
+
+  "block.vulcan.vulcan_ore": "Vulcan Ore",
+
+  "item.vulcan.vulcan_sword": "Vulcan Sword",
+  "item.vulcan.vulcan_shovel": "Vulcan Shovel",
+  "item.vulcan.vulcan_pickaxe": "Vulcan Pickaxe",
+  "item.vulcan.vulcan_axe": "Vulcan Axe",
+  "item.vulcan.vulcan_hoe": "Vulcan Hoe",
+  "item.vulcan.vulcan_helmet": "Vulcan Helmet",
+  "item.vulcan.vulcan_chestplate": "Vulcan Chestplate",
+  "item.vulcan.vulcan_leggings": "Vulcan Legging",
+  "item.vulcan.vulcan_boots": "Vulcan Boots",
+
+  "itemgroup.vulcan": "Vulcan"
+}

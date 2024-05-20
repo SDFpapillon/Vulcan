@@ -1,0 +1,8 @@
+{
+  "replace": "false",
+  "values": [
+    "vulcan:vulcan_ore",
+    "vulcan:vulcan_block",
+    "vulcan:vulcan_reinforced_block"
+  ]
+}

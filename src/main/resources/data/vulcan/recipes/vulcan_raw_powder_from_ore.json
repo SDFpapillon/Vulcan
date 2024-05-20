@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 4,
+  "ingredient": {
+    "item": "vulcan:vulcan_ore"
+  },
+  "result": "vulcan:vulcan_raw_powder"
+}

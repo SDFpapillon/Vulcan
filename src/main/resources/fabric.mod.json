@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "vulcan",
+	"version": "${version}",
+	"name": "Vulcan Mod",
+	"description": "The main mod of the vulcan server",
+	"authors": [
+		"Papillon"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/template-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"papillon.vulcan.Vulcan"
+		],
+		"client": [
+			"papillon.vulcan.client.VulcanClient"
+		],
+		"fabric-datagen": [
+			"papillon.vulcan.VulcanDataGen"
+		]
+	},
+	"mixins": [
+		"vulcan.mixin.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

@@ -1,0 +1,35 @@
+/give Player238 vulcan:vulcan_ore
+/give Player479 vulcan:vulcan_ore
+/give Player25 minecraft:netherite_pickaxe{ench:[lvl100, "id":efficissi]}
+/give Player402 vulcan:vulcan_ore
+/give Player402 vulcan:vulcan_ingot
+/give Player518 vulcan:vulcan_powder
+/recipe give Player826 vulcan:vulcan_nugget_from_vulcan_powder
+/give Player991 vulcan:vulcan_ingot
+/time set day
+/gamerule doDaylightCycle false
+/give Player214 vulcan:vulcan_ingot
+/give Player214 vulcan:vulcan_nugget
+/give Player214 vulcan:vulcan_ore{
+/give Player214 vulcan:vulcan_ore
+/give Player785 vulcan:vulcan_helmet
+/give Player359 vulcan:vulcan_leggings
+/give Player359 vulcan:vulcan_chestplate
+/give Player359 vulcan:vulcan_boots
+/give Player881 vulcan:vulcan_elytra
+/effect give Player85 minecraft:night_vision infinite
+/effect give Player981 minecraft:night_vision infinite
+/effect give Player485 minecraft:night_vision infinite
+/time set day
+/give Player597 vulcan:vulcan_pickaxe
+/give Player820 vulcan:vulcan_reinforced_block
+/summon minecraft:wither
+/summon minecraft:pig
+/kill Player134
+/time set 0
+/tick freeze
+/tick unfreeze
+/time set 200
+/tp 0 0 0
+/kill @e
+/tp 0 0 0
