@@ -18,7 +18,6 @@ public class ItemStackMixin {
     @Inject(at = @At("HEAD"), method = "inventoryTick")
     public void inventoryTick(World world, Entity entity, int slot, boolean selected, CallbackInfo ci) {
         if(entity.isPlayer()) {
-            Vulcan.LOGGER.info(String.valueOf(Event.difficulty));
             Event.DifficultyCalcule((PlayerEntity) entity, world);
         }
     }

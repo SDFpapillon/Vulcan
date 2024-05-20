@@ -33,3 +33,8 @@
 /tp 0 0 0
 /kill @e
 /tp 0 0 0
+/kill @e
+/summon minecraft:tnt
+/kill @e
+/summon minecraft:tnt
+/kill @e

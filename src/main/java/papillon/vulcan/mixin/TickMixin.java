@@ -16,7 +16,5 @@ public abstract class TickMixin {
     @Inject(at = @At("HEAD"), method = "tick")
     public void tick(CallbackInfo ci) {
         Event.SlimeRain();
-        Event.DoSlimeFall();
-
     }
 }

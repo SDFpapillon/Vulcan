@@ -52,7 +52,7 @@ public class Event {
         }
          return val;
     }
-
+    
     private static boolean AsDiamond(PlayerEntity player) {
         boolean val = false;
         if(hasABoot(player)){
@@ -112,7 +112,7 @@ public class Event {
             Vulcan.LOGGER.info("slime!!!");
             SlimeEntity slime = new SlimeEntity(EntityType.SLIME, world_);
             slime.setSize(4, true);
-            slime.setPos(0, 0, 0);
+            slime.setPos(100*Math.random(), 0, 100*Math.random()); //@todo modifier y, c'est la hauteur
             world_.spawnEntity(slime);
         }
     }
@@ -120,11 +120,15 @@ public class Event {
     public static void SlimeRain() {
         if(world_ != null) {
             if (TimeBeforeSlime == 0) {
-                if (world_.getTimeOfDay() == 0) { //debut du jour
+                if (world_.getTimeOfDay() >= 0 && world_.getTimeOfDay() <= 13000) { //pnd la journée
                     IsSlimeRain = true;
+                    if(world_.getTimeOfDay()%100 == 0){
+                        DoSlimeFall();
+                    }
                 }
-                if (world_.getTimeOfDay() == 13000) { //fin du jour
+                if (world_.getTimeOfDay() >= 13000) { //fin du jour
                     IsSlimeRain = false;
+                    TimeBeforeSlime = 2400;
                     //set the next rain
                     //set the silver invade
                 }
