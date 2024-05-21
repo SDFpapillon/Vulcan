@@ -1,18 +1,19 @@
 package papillon.vulcan.event;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.mob.SlimeEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
-import papillon.vulcan.Vulcan;
 import papillon.vulcan.item.ModItems;
-import papillon.vulcan.mixin.TickMixin;
 
 public class Event {
     public static boolean IsSlimeRain = false;
+    public static boolean SlimeStart = false;
     public static long TimeBeforeSlime = 0;
+    public static boolean IsSilverFishInvade = false;
+    public static boolean SilverFishStar = false;
+    public static long TimeBeforeFish = 0;
     public static boolean IsBloodMon = false;
     public static boolean IsSunOfGod = false;
     public static boolean IsSilverFishInvide = false;
@@ -109,7 +110,6 @@ public class Event {
 
     public static void DoSlimeFall() {
         if(world_ != null) {
-            Vulcan.LOGGER.info("slime!!!");
             SlimeEntity slime = new SlimeEntity(EntityType.SLIME, world_);
             slime.setSize(4, true);
             slime.setPos(100*Math.random(), 0, 100*Math.random()); //@todo modifier y, c'est la hauteur
@@ -120,22 +120,53 @@ public class Event {
     public static void SlimeRain() {
         if(world_ != null) {
             if (TimeBeforeSlime == 0) {
-                if (world_.getTimeOfDay() >= 0 && world_.getTimeOfDay() <= 13000) { //pnd la journée
+                if(!IsSlimeRain) {
                     IsSlimeRain = true;
-                    if(world_.getTimeOfDay()%100 == 0){
-                        DoSlimeFall();
-                    }
                 }
-                if (world_.getTimeOfDay() >= 13000) { //fin du jour
-                    IsSlimeRain = false;
-                    TimeBeforeSlime = 2400;
-                    //set the next rain
-                    //set the silver invade
+                else {
+                    if (world_.getTimeOfDay() == 0) {
+                        SlimeStart = true;
+                    }
+                    if (world_.getTimeOfDay() >= 0 && world_.getTimeOfDay() <= 13000) {//pnd la journée
+                        if (world_.getTimeOfDay() % 100 == 0) {
+                            DoSlimeFall();
+                        }
+                    }
+                    if (world_.getTimeOfDay() >= 13000 && SlimeStart) { //fin du jour
+                        TimeBeforeSlime = (long) (24000*(1+Math.random()));
+                        TimeBeforeSlime = (long) ( 9600*(1+Math.random()));
+                        SlimeStart = false;
+                    }
                 }
 
             } else {
                 TimeBeforeSlime -= 1;
+                TimeBeforeFish -= 1;
             }
         }
     }
+
+    public static void SilverFishInvade() {
+        if(world_ != null) {
+            if (TimeBeforeFish == 0) {
+                if (!IsSilverFishInvade) {
+                    IsSilverFishInvade = true;
+                } else {
+                    if (world_.getTimeOfDay() == 0) {
+                        SilverFishStar = true;
+                    }
+                    if (world_.getTimeOfDay() >= 0 && world_.getTimeOfDay() <= 13000) {//pnd la journée
+                        if (world_.getTimeOfDay() % 100 == 0) {
+                            DoSlimeFall(); //@todo modifer
+                        }
+                    }
+                    if (world_.getTimeOfDay() >= 13000 && SilverFishStar) { //fin du jour
+                        SilverFishStar = false;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
