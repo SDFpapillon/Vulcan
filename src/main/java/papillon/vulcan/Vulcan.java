@@ -1,12 +1,11 @@
 package papillon.vulcan;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.entity.player.PlayerEntity;
+import net.fabricmc.fabric.api.event.player.AttackEntityCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import papillon.vulcan.block.ModBlocks;
+import papillon.vulcan.event.AttackEntityHandler;
 import papillon.vulcan.item.ModItemGroups;
 import papillon.vulcan.item.ModItems;
 import papillon.vulcan.world.gen.ModWorldGeneration;
@@ -22,5 +21,7 @@ public class Vulcan implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModItems.registerModItems();
         ModItemGroups.registerItemGroup();
+
+        AttackEntityCallback.EVENT.register(new AttackEntityHandler());
     }
 }

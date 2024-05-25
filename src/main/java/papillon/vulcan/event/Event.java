@@ -5,6 +5,7 @@ import net.minecraft.entity.mob.SlimeEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Items;
 import net.minecraft.world.World;
+import papillon.vulcan.Vulcan;
 import papillon.vulcan.item.ModItems;
 
 public class Event {
@@ -20,6 +21,10 @@ public class Event {
     public static int difficulty = 0;
     public static long time_controle = 0;
     public static World world_;
+
+    public static void upDateWorld(World world) {
+        world_ = world;
+    }
 
     private static boolean hasAHelmet(PlayerEntity player) {
         return !player.getInventory().getArmorStack(3).isEmpty();
@@ -90,6 +95,7 @@ public class Event {
 
     public static void DifficultyCalcule(PlayerEntity player, World world) {
         world_ = world;
+        Vulcan.LOGGER.info("tick");
         if (world.getTimeOfDay() % 100 == 0) {
             difficulty = 0;
         }
@@ -110,15 +116,18 @@ public class Event {
 
     public static void DoSlimeFall() {
         if(world_ != null) {
+            Vulcan.LOGGER.info("slime");
             SlimeEntity slime = new SlimeEntity(EntityType.SLIME, world_);
             slime.setSize(4, true);
             slime.setPos(100*Math.random(), 0, 100*Math.random()); //@todo modifier y, c'est la hauteur
+            slime.setNoGravity(true);
             world_.spawnEntity(slime);
         }
     }
 
     public static void SlimeRain() {
         if(world_ != null) {
+            Vulcan.LOGGER.info("rain");
             if (TimeBeforeSlime == 0) {
                 if(!IsSlimeRain) {
                     IsSlimeRain = true;
