@@ -9,6 +9,10 @@ import net.minecraft.client.util.InputUtil;
 import org.lwjgl.glfw.GLFW;
 import papillon.vulcan.networking.ModMessages;
 
+//deff des nouvelle key
+// permet de faire des nouveaux paramettre
+
+
 public class KeyInputHandler {
     public static final String KEY_CATEGORY_TUTORIAL = "key.category.tutorialmod.tutorial";
     public static final String KEY_DRINK_WATER = "key.tutorialmod.drink_water";

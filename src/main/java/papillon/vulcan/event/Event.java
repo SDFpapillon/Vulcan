@@ -22,8 +22,11 @@ public class Event {
     public static long time_controle = 0;
     public static World world_;
 
+
     public static void upDateWorld(World world) {
-        world_ = world;
+        if (world!=null) {
+            world_ = world;
+        }
     }
 
     private static boolean hasAHelmet(PlayerEntity player) {
@@ -94,8 +97,7 @@ public class Event {
     }
 
     public static void DifficultyCalcule(PlayerEntity player, World world) {
-        world_ = world;
-        Vulcan.LOGGER.info("tick");
+        upDateWorld(world);
         if (world.getTimeOfDay() % 100 == 0) {
             difficulty = 0;
         }
